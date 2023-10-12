@@ -12,6 +12,7 @@ public record GetMonumentoEnRutaDto(
 ) {
 
     public static GetMonumentoEnRutaDto of (Monumento m) {
+
         return new GetMonumentoEnRutaDto(
                 m.getId(),
                 m.getNombre(),
@@ -25,6 +26,7 @@ public record GetMonumentoEnRutaDto(
                 ? m.getCategoria().getNombre()
                 : "Sin categoría"
         );
+
     }
 
 

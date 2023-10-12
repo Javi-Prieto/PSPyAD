@@ -9,7 +9,7 @@ import java.time.LocalDate;
 @Data
 @AllArgsConstructor
 public class Empoloyees {
-
+    //Así indicamos cada uno de los atributos con una breve descripción
     @Schema(example = "4", description = "identificador de empleado númerico autoincrementado")
     private Long id;
 
