@@ -1,0 +1,16 @@
+server:
+    port: 8888
+
+spring:
+  application:
+    name: configserver
+
+    cloud:
+      config:
+        server:
+          git:
+            #Este es el repositorio dónde vamos a tener la configuración
+            uri: https://github.com/Javi-Prieto/PSPyAD/ExampleForconfiguration
+            username: Javi-Prieto
+            password: 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
+            default-label: main
