@@ -7,8 +7,6 @@ import lombok.NoArgsConstructor;
 import salesianostriana.dam.edu.EjPruebaValidacion.model.Employee;
 
 @Builder
-@Data
-@AllArgsConstructor
 public record GetEmployeeDTO(
         String nombreCompleto,
         Double salary
