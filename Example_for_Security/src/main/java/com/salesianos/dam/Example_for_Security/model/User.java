@@ -47,7 +47,7 @@ public class User implements UserDetails {
     @Column(unique = true, updatable = false)
     private String username;
 
-    private String passw;
+    private String password;
 
     private String avatar;
     private String fullName;
@@ -86,7 +86,7 @@ public class User implements UserDetails {
 
     @Override
     public String getPassword() {
-        return passw;
+        return password;
     }
 
     @Override
