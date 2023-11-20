@@ -19,7 +19,7 @@ public class UserService {
     public User createuser(UserDTO userDTO, EnumSet<UserRole> roles){
         User user = User.builder()
                 .username(userDTO.username())
-                .passw(encoder.encode(userDTO.passw()))
+                .password(encoder.encode(userDTO.passw()))
                 .avatar(userDTO.avatar())
                 .fullName(userDTO.fullName())
                 .roles(roles)
@@ -27,10 +27,10 @@ public class UserService {
         return repo.save(user);
     }
     public User createUserWithUserRole(UserDTO userDTO){
-        return createuser(userDTO, (EnumSet<UserRole>) Set.of(UserRole.USER));
+        return createuser(userDTO, EnumSet.of(UserRole.USER));
     }
     public User createUserWithAdminRole(UserDTO userDTO){
-        return createuser(userDTO, (EnumSet<UserRole>) Set.of(UserRole.ADMIN));
+        return createuser(userDTO, EnumSet.of(UserRole.ADMIN));
     }
 
     public List<User> findAll(){
