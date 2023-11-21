@@ -8,4 +8,6 @@ import java.util.UUID;
 
 public interface UserRepositorio extends JpaRepository<User, UUID> {
     Optional<User> findFirstByUsername(String username);
+
+    boolean existsByUsernameIgnoreCase(String username);
 }
