@@ -5,7 +5,7 @@ public class AppMain {
         final int TAM = 1024 * 16;
 
         try (BufferedInputStream bin = new BufferedInputStream(new FileInputStream("tocopy.txt"));
-             BufferedOutputStream bout = new BufferedOutputStream(new FileOutputStream("copy.txt"));){
+             BufferedOutputStream bout = new BufferedOutputStream(new FileOutputStream("copy.txt"))){
 
             int cantidadBytes = 0;
             byte[] buffer = new byte[TAM];
